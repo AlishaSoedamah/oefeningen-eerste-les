@@ -11,10 +11,22 @@ export default function Opdracht2() {
     // Zie deze EagleDev voor meer info over objecten: https://eagledev.nl/tasks/705 
     // OPDRACHT: print met <Text> componenten de waardes van je object op je scherm
     // OPDRACHT: geef de <Text> componenten een mooie styling
-    let printString = 'Deze string printen we op het scherm.'
+    let person = {
+      personName:'Alisha',
+      personAge:'16',
+      personOpleiding:'Software Dev',
+      personGame: 'Persona 5',
+      personSeries:'Devilman Crybaby',
+}
+    let printString = person
+
     return (
       <View style={styles.mainContainer}>
-        <Text>{printString}</Text>
+        <Text style={styles.Text}>{printString.personName}</Text>
+        <Text style={styles.Text}>{printString.personAge}</Text>
+        <Text style={styles.Text}>{printString.personOpleiding}</Text>
+        <Text style={styles.Text}>{printString.personGame}</Text>
+        <Text style={styles.Text}>{printString.personSeries}</Text>
       </View>
     );
   }
@@ -26,4 +38,7 @@ export default function Opdracht2() {
       alignItems: 'center',
       justifyContent: 'center',
     },
+    Text: {
+      color:'red',
+    }
   });
